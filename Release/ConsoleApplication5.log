@@ -1,0 +1,585 @@
+﻿  bulletInteraction.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         ]
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         ]
+  (compiling source file 'bulletInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(20,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(20,28): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(20,28): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(20,28): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(20,28): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(21,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(21,28): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(21,28): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(21,28): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(21,28): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(34,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(34,24): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(34,24): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(34,24): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(34,24): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(35,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(35,24): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(35,24): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(35,24): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(35,24): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(40,47): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(41,43): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(111,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(125,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(174,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(228,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\bulletInteraction.cpp(302,31): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication5.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\level.h(44,44): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\level.h(73,39): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\level.h(144,36): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editorButton.h(16,129): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editorButton.h(16,129): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editorButton.h(16,129): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editorButton.h(16,129): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editorButton.h(16,129): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destructibleBlock.h(18,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destructibleBlock.h(18,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror1Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror1Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror2Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror2Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror3Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror3Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror4Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror4Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\movableBlock.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\movableBlock.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\undestructableBlock.h(12,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\undestructableBlock.h(12,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(17,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(17,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destroyedTank.h(17,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destroyedTank.h(17,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\transportTrack.h(14,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\transportTrack.h(14,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\flag.h(15,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\flag.h(15,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,48): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,48): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,48): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,48): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,48): warning C4305:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,42): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,42): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,42): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,42): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(258,42): warning C4305:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,59): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,59): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,59): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,59): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,59): warning C4305:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,53): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,53): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,53): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,53): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mainMenu\editor.h(259,53): warning C4305:         ]
+  (compiling source file 'ConsoleApplication5.cpp')
+  
+  extractMatrix.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\extractMatrix.cpp(49,51): warning C4101: 'e': unreferenced local variable
+  game.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         ]
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         ]
+  (compiling source file 'game.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(130,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(131,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(241,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(242,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(298,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(306,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\game.cpp(328,23): warning C4018: '<': signed/unsigned mismatch
+  map.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destructibleBlock.h(18,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destructibleBlock.h(18,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror1Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror1Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror2Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror2Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror3Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror3Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror4Tile.h(16,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\mirror4Tile.h(16,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\movableBlock.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\movableBlock.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\undestructableBlock.h(12,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\undestructableBlock.h(12,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(17,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(17,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,61): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(107,50): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,61): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(109,50): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,69): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(111,55): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,69): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tank1.h(113,55): warning C4244:         ]
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destroyedTank.h(17,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\destroyedTank.h(17,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\transportTrack.h(14,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\transportTrack.h(14,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\flag.h(15,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\flag.h(15,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'map.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(246,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(247,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,41): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,41): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,41): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,41): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,27): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,27): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,27): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,27): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(268,27): warning C4244:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(327,44): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(328,44): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(329,44): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(330,44): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\map.cpp(382,26): warning C4018: '<': signed/unsigned mismatch
+  player.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         ]
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         ]
+  (compiling source file 'player.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,40): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,40): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,40): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,40): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,40): warning C4305:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,34): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,34): warning C4305:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,34): warning C4305:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,34): warning C4305:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(14,34): warning C4305:         ]
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(63,82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(63,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(127,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\player.cpp(141,22): warning C4018: '<': signed/unsigned mismatch
+  playerInteraction.cpp
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tile.h(61,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\walkableGround.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\tileInWater.h(15,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\waterTile.h(19,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(43,58): warning C4244:         ]
+  (compiling source file 'playerInteraction.cpp')
+  
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         with
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         [
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:             T=float
+C:\Users\KORISNIK\Documents\SFML\LaserTank\ConsoleApplication5\include\player.h(44,58): warning C4244:         ]
+  (compiling source file 'playerInteraction.cpp')
+  
+  pullFromLevelsFromServer.cpp
+  sfmlWeb.cpp
+  tinyxml2.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2486 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ConsoleApplication5.vcxproj -> C:\Users\KORISNIK\Documents\SFML\LaserTank\Release\LaserTank.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
