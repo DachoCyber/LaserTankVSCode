@@ -14,7 +14,7 @@ LIBS := -LSFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)\SFML-2.6.2\lib \
         -lopengl32 -lfreetype -lwinmm -lgdi32 -llibcurl
 
 # Source files
-SRC := bulletInteraction.cpp ConsoleApplication5.cpp extractMatrix.cpp \
+SRC := bulletInteraction.cpp main.cpp extractMatrix.cpp \
        game.cpp map.cpp player.cpp playerInteraction.cpp pullFromLevelsFromServer.cpp \
        sfmlWeb.cpp tinyxml2/tinyxml2.cpp
 
