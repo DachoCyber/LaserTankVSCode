@@ -15,7 +15,7 @@ LIBS := -LSFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)\SFML-2.6.2\lib \
 
 # Source files
 SRC := src/bulletInteraction.cpp src/main.cpp src/extractMatrix.cpp \
-       src/game.cpp src/map.cpp src/player.cpp src/layerInteraction.cpp src/pullFromLevelsFromServer.cpp \
+       src/game.cpp src/map.cpp src/player.cpp src/playerInteraction.cpp src/pullFromLevelsFromServer.cpp \
        src/sfmlWeb.cpp tinyxml2/tinyxml2.cpp
 
 # Object files
