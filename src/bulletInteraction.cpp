@@ -1,4 +1,4 @@
-#include "include/bulletInteraction.h"
+#include "../include/bulletInteraction.h"
 
 BulletInteraction::BulletInteraction(int windowSizeX, int windowSizeY, Tank& tank, Map& map) 
 

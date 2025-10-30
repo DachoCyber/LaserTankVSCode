@@ -1,5 +1,5 @@
-#include "include/game.h"
-#include "include/playerInteraction.h"
+#include "../include/game.h"
+#include "../include/playerInteraction.h"
 
 
 MainGame::MainGame(int windowSizeX, int windowSizeY, int level) :

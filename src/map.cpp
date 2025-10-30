@@ -1,22 +1,22 @@
-#include "include/map.h"
-#include "include/extractMatrix.h"
+#include "../include/map.h"
+#include "../include/extractMatrix.h"
 
 
-#include "include/tile.h"
-#include "include/destructibleBlock.h"
-#include "include/mirror1Tile.h"
-#include "include/mirror2Tile.h"
-#include "include/mirror3Tile.h"
-#include "include/mirror4Tile.h"
-#include "include/waterTile.h"
-#include "include/movableBlock.h"
-#include "include/undestructableBlock.h"
-#include "include/tank1.h"
-#include "include/destroyedTank.h"
-#include "include/transportTrack.h"
-#include "include/tileInWater.h"
+#include "../include/tile.h"
+#include "../include/destructibleBlock.h"
+#include "../include/mirror1Tile.h"
+#include "../include/mirror2Tile.h"
+#include "../include/mirror3Tile.h"
+#include "../include/mirror4Tile.h"
+#include "../include/waterTile.h"
+#include "../include/movableBlock.h"
+#include "../include/undestructableBlock.h"
+#include "../include/tank1.h"
+#include "../include/destroyedTank.h"
+#include "../include/transportTrack.h"
+#include "../include/tileInWater.h"
 
-#include "include/flag.h"
+#include "../include/flag.h"
 
 #include <stdexcept>
 #include <fstream>

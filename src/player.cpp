@@ -1,4 +1,4 @@
-#include "include/player.h"
+#include "../include/player.h"
 
 
 Tank::Tank(int gridPosX, int gridPosY, int windowSizeX, int windowSizeY) 

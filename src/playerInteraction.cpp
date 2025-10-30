@@ -1,4 +1,4 @@
-#include "include/playerInteraction.h"
+#include "../include/playerInteraction.h"
 
 bool validMove(int x, int y) {
     return x >= 0 && x < 16  && 

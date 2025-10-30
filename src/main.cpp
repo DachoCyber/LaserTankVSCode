@@ -1,9 +1,9 @@
-﻿#include "include/game.h"
-#include "include/mainMenu/mainMenu.h"
+﻿#include "../include/game.h"
+#include "../include/mainMenu/mainMenu.h"
 
-#include "include/mainMenu/resources.h"
+#include "../include/mainMenu/resources.h"
 
-#include "include/movesProcessor.h"
+#include "../include/movesProcessor.h"
 
 #include <filesystem>
 #include <curl/curl.h>
