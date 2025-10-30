@@ -1,4 +1,2 @@
-Linux And Mac Compilation:
-	make
-Windows:
+COMPILATION:
 	mingw32-make all
