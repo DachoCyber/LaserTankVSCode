@@ -25,8 +25,8 @@
 Map::Map(int level) {
     readMapFromXML(tileMap, level);
 
-    int mapWidth = tileMap[0].size();
-    int mapHeight = tileMap.size();
+    int mapWidth = 16;
+    int mapHeight = 16;
 
     tiles.resize(mapHeight);
     for (int y = 0; y < mapHeight; ++y) {
