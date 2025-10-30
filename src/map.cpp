@@ -25,14 +25,20 @@
 Map::Map(int level) {
     readMapFromXML(tileMap, level);
 
+    int mapWidth = tileMap[0].size();
+    int mapHeight = tileMap.size();
+
     tiles.resize(mapHeight);
     for (int y = 0; y < mapHeight; ++y) {
         tiles[y].resize(mapWidth);
     }
-    
+
     loadTextures();
     buildMap();
+
+    std::cout << "SUCCESS" << std::endl;
 }
+
 
 void Map::setTileCoords(int i, int j, int code)
 {
