@@ -1,30 +1,38 @@
 # ==========================================
-# Makefile for LaserTank (Visual Studio Code)
+# Makefile for LaserTank (VS Code / MinGW)
 # ==========================================
 
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -std=c++17 -Wall -DSFML_STATIC -DCURL_STATICLIB -DWIN32
-INCLUDES := -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)\SFML-2.6.2\include" -I"C:\CURL" -Itinyxml2 -Iinclude
+CXXFLAGS := -std=c++17 -Wall -DSFML_STATIC -DCURL_STATICLIB -DWIN32 -pipe
+INCLUDES := -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/include" \
+            -I"CURL" \
+            -Iinclude \
+            -Itinyxml2
 
 # Libraries
-LIBS := -LSFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)\SFML-2.6.2\lib \
-        -L"CURL\lib" \
+LIBS := -L"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/lib" \
+        -L"CURL/lib" \
         -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lsfml-network-s \
-        -lopengl32 -lfreetype -lwinmm -lgdi32 -llibcurl
+        -lopengl32 -lfreetype -lwinmm -lgdi32 -lcurl
 
-# Source files
-SRC := src/bulletInteraction.cpp src/main.cpp src/extractMatrix.cpp \
-       src/game.cpp src/map.cpp src/player.cpp src/playerInteraction.cpp src/pullFromLevelsFromServer.cpp \
-       src/sfmlWeb.cpp tinyxml2/tinyxml2.cpp
+# Source and build directories
+SRC_DIR := src
+OBJ_DIR := obj
+BIN_DIR := bin
 
-# Object files
-OBJ := $(SRC:.cpp=.o)
+# Sources and objects
+SRC := $(wildcard $(SRC_DIR)/*.cpp)
+OBJ := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC)) tinyxml2/tinyxml2.o
 
-# Output executable
-TARGET := LaserTank.exe
+# Target executable
+TARGET := $(BIN_DIR)/LaserTank.exe
 
-# Build type (default Debug)
+# Precompiled header
+PCH := include/pch.h
+PCH_GCH := $(OBJ_DIR)/pch.h.gch
+
+# Build configuration
 CONFIG ?= Debug
 
 ifeq ($(CONFIG),Debug)
@@ -37,21 +45,37 @@ endif
 # Build rules
 # =========================
 
-all: $(TARGET)
+all: dirs $(PCH_GCH) $(TARGET)
 
+# Create necessary folders
+dirs:
+	@if not exist "$(OBJ_DIR)" mkdir "$(OBJ_DIR)"
+	@if not exist "$(BIN_DIR)" mkdir "$(BIN_DIR)"
+
+# Precompiled header rule
+$(PCH_GCH): $(PCH)
+	@echo [PCH] Building precompiled header...
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -x c++-header $(PCH) -o $(PCH_GCH)
+
+# Link
 $(TARGET): $(OBJ)
-	@echo Linking...
+	@echo [LINK] Linking $(TARGET)
 	$(CXX) $(OBJ) -o $(TARGET) $(LIBS)
 
-%.o: %.cpp
-	@echo Compiling $<
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+# Compile source files
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(PCH_GCH)
+	@echo [C++] Compiling $<
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -include $(PCH) -c $< -o $@
 
+# Clean
 clean:
 	@echo Cleaning...
-	del /Q $(OBJ) $(TARGET) 2>nul || true
+	-del /Q $(OBJ_DIR)\*.o 2>nul || exit 0
+	-del /Q $(PCH_GCH) 2>nul || exit 0
+	-del /Q $(TARGET) 2>nul || exit 0
 
-run: $(TARGET)
-	./$(TARGET)
+run: all
+	@echo Running...
+	$(TARGET)
 
-.PHONY: all clean run
+.PHONY: all clean run dirs
