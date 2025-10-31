@@ -29,7 +29,7 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC)) tinyxml2/tinyxml2.o
 
 # Target executable
-TARGET := $(BIN_DIR)/LaserTank.exe
+TARGET := LaserTank.exe
 
 # =========================
 # Build rules
