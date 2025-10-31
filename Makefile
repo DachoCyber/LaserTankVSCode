@@ -49,8 +49,8 @@ all: dirs $(PCH_GCH) $(TARGET)
 
 # Create necessary folders
 dirs:
-	@if not exist "$(OBJ_DIR)" mkdir "$(OBJ_DIR)"
-	@if not exist "$(BIN_DIR)" mkdir "$(BIN_DIR)"
+	@if not exist "$(OBJ_DIR)" (mkdir "$(OBJ_DIR)")
+	@if not exist "$(BIN_DIR)" (mkdir "$(BIN_DIR)")
 
 # Precompiled header rule
 $(PCH_GCH): $(PCH)
