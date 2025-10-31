@@ -1,42 +1,40 @@
 # ==========================================
-# Makefile for LaserTank (VS Code / MinGW)
-# Without PCH
+# Makefile for LaserTank (MinGW / VS Code)
+# Release build using dynamic SFML (GCC 13.1.0 DW2 32-bit)
 # ==========================================
 
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -std=c++17 -Wall -DSFML_STATIC -DCURL_STATICLIB -DWIN32 -pipe
-INCLUDES := -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/include" \
-            -I"CURL" \
-            -Iinclude \
-            -Itinyxml2
+CXXFLAGS := -std=c++17 -Wall -O2 -DNDEBUG -mthreads -pipe
 
-# Libraries
-LIBS := -L"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/lib" \
-        -L"CURL/lib" \
-        -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lsfml-network-s \
-        -lopengl32 -lfreetype -lwinmm -lgdi32 -lcurl
+# Include directories
+INCLUDES := \
+    -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/include" \
+    -I"CURL"
+
+# Library directories
+LIBDIRS := \
+    -L"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/lib" \
+    -L"CURL/lib"
+
+# Libraries (dynamic linking)
+LIBS := \
+    -lsfml-graphics \
+    -lsfml-window \
+    -lsfml-system \
+    -lsfml-network \
+    -lopengl32 -lfreetype -lwinmm -lgdi32 -luser32 -ladvapi32 -lshell32 -lws2_32 -lcurl
 
 # Source and build directories
 SRC_DIR := src
 OBJ_DIR := obj
-BIN_DIR := bin
 
-# Sources and objects
+# Source and object files
 SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC)) tinyxml2/tinyxml2.o
 
 # Target executable
 TARGET := LaserTank.exe
-
-# Build configuration
-CONFIG ?= Debug
-
-ifeq ($(CONFIG),Debug)
-    CXXFLAGS += -g -O0
-else ifeq ($(CONFIG),Release)
-    CXXFLAGS += -O2 -DNDEBUG
-endif
 
 # =========================
 # Build rules
@@ -44,28 +42,26 @@ endif
 
 all: dirs $(TARGET)
 
-# Create necessary folders
+# Create build directories
 dirs:
-	@if not exist "$(OBJ_DIR)" (mkdir "$(OBJ_DIR)")
-	@if not exist "$(BIN_DIR)" (mkdir "$(BIN_DIR)")
+	@if not exist "$(OBJ_DIR)" mkdir "$(OBJ_DIR)"
 
-# Link
+# Linking
 $(TARGET): $(OBJ)
 	@echo [LINK] Linking $(TARGET)
-	$(CXX) $(OBJ) -o $(TARGET) $(LIBS)
+	$(CXX) $(OBJ) -o $(TARGET) $(LIBDIRS) $(LIBS)
 
-# Compile source files
+# Compiling source files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@echo [C++] Compiling $<
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
-# Clean
+# Clean up
 clean:
 	@echo Cleaning...
 	-del /Q $(OBJ_DIR)\*.o 2>nul || exit 0
 	-del /Q $(TARGET) 2>nul || exit 0
 
-# Run
 run: all
 	@echo Running...
 	$(TARGET)
