@@ -17,7 +17,7 @@ INCLUDES := -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/include"
 LIBS := -L"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/lib" \
         -L"CURL/lib" \
         -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lsfml-network-s \
-        -lopengl32 -lfreetype -lwinmm -lgdi32 -lws2_32 -lbcrypt -lcurl -lz -static-libgcc -static-libstdc++
+        -lopengl32 -lfreetype -lwinmm -lgdi32 -lws2_32 -lbcrypt -lcurl -static-libgcc -static-libstdc++
 
 # Source and build directories
 SRC_DIR := src
