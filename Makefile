@@ -1,5 +1,6 @@
 # ==========================================
 # Makefile for LaserTank (VS Code / MinGW)
+# Without PCH
 # ==========================================
 
 # Compiler and flags
@@ -26,11 +27,7 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC)) tinyxml2/tinyxml2.o
 
 # Target executable
-TARGET := $(BIN_DIR)/LaserTank.exe
-
-# Precompiled header
-PCH := include/pch.h
-PCH_GCH := $(OBJ_DIR)/pch.h.gch
+TARGET := LaserTank.exe
 
 # Build configuration
 CONFIG ?= Debug
@@ -45,17 +42,12 @@ endif
 # Build rules
 # =========================
 
-all: dirs $(PCH_GCH) $(TARGET)
+all: dirs $(TARGET)
 
 # Create necessary folders
 dirs:
 	@if not exist "$(OBJ_DIR)" (mkdir "$(OBJ_DIR)")
 	@if not exist "$(BIN_DIR)" (mkdir "$(BIN_DIR)")
-
-# Precompiled header rule
-$(PCH_GCH): $(PCH)
-	@echo [PCH] Building precompiled header...
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -x c++-header $(PCH) -o $(PCH_GCH)
 
 # Link
 $(TARGET): $(OBJ)
@@ -63,17 +55,17 @@ $(TARGET): $(OBJ)
 	$(CXX) $(OBJ) -o $(TARGET) $(LIBS)
 
 # Compile source files
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(PCH_GCH)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@echo [C++] Compiling $<
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -include $(PCH) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 # Clean
 clean:
 	@echo Cleaning...
 	-del /Q $(OBJ_DIR)\*.o 2>nul || exit 0
-	-del /Q $(PCH_GCH) 2>nul || exit 0
 	-del /Q $(TARGET) 2>nul || exit 0
 
+# Run
 run: all
 	@echo Running...
 	$(TARGET)
