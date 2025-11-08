@@ -61,8 +61,9 @@ void MainGame::run() {
             while (window->pollEvent(event)) {
                 if (event.type == sf::Event::Closed) {
 
+					isWindowClosed = true;
                     window->close();
-                    isWindowClosed = true;
+                    
                 }
                 if (event.type == sf::Event::KeyPressed && (!tileMap.getTileMap()[player.getGridPosition().y][player.getGridPosition().x]->isTransportTrack() || returnFromTrack) && (tileMap.getTileMap()[player.getGridPosition().y][player.getGridPosition().x]->isTransportTrack() || !bulletFired)) {
 
