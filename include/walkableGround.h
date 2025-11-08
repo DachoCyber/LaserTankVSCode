@@ -13,7 +13,7 @@ public:
             walkable = true;
             sprite.setTexture(texture);
             sprite.setPosition(x, y);
-            sprite.setScale(32.f/55.f, 32.f/55.f);
+            //sprite.setScale(32.f/55.f, 32.f/55.f);
         }
         catch(const std::string& what) {
             std::cerr << what << std::endl;

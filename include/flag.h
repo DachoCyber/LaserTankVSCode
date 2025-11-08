@@ -13,7 +13,7 @@ public:
         }
         sprite.setTexture(texture);
         sprite.setPosition(x, y);
-        sprite.setScale(32.f/571.f, 32.f/574.f);
+        //sprite.setScale(32.f/571.f, 32.f/574.f);
     }
     std::unique_ptr<Tile> clone() const override {
         auto clone = std::make_unique<Flag>(posX, posY, texture); // Copy constructor

@@ -149,9 +149,12 @@ int main() {
 
 
                 chosenLevel = (chosenLevel + 1) % levelCount;
-            }
+		std::cout << chosenLevel << std::endl;
+		std::cout << enterAnotherLevel << std::endl;
+	    }
+	  
         }
-        //std::cout << getIsClosed << std::endl;
+        std::cout << getIsClosed << std::endl;
     } while (getIsClosed);
     return 0;
 }

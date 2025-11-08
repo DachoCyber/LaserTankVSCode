@@ -73,9 +73,7 @@ void MainGame::run() {
             tileMap.updateTransportTracks();
             tileMap.updateWaterTiles();
 
-            if (!tileMap.getTileMap()[player.getGridPosition().y][player.getGridPosition().x]) {
-                std::cout << "TILEMAP NULLPTR" << std::endl;
-            }
+            
 
             if (tileMap.getTileMap()[player.getGridPosition().y][player.getGridPosition().x]->isTransportTrack() && !returnFromTrack) {
                 handlTransportableTrack(player.getGridPosition().y, player.getGridPosition().x);
@@ -136,7 +134,6 @@ bool MainGame::shouldEnemyFireBullet() {
                     player.getGridPosition().x * tileSize,
                     player.getGridPosition().y * tileSize)) {
 
-                    std::cout << "now bullet should be fired" << std::endl;
                     tileMap.getTileMap()[i][j]->fireBullet();
                     bullets.push_back(tileMap.getTileMap()[i][j]->getBullet());
                     bulletFired = true;
@@ -193,7 +190,6 @@ void MainGame::handleInput() {
                 playerPositions[playerPositions.size() - 1].first,
                 playerPositions[playerPositions.size() - 1].second));
 
-            std::cout << "PLAYERPOSITIONS SIZE:" << playerPositions.size() << std::endl;
 
             if (playerPositions.size() > 0) {
 
@@ -231,19 +227,10 @@ void MainGame::handleInput() {
             }
         }
         // Save state BEFORE movement
-        std::cout << "Pushing player position: " << player.getGridPosition().x << " " << player.getGridPosition().y << std::endl;
-        std::cout << "Map state:" << std::endl;
-
-
-        std::cout << "Now pushing mapState(line 196):" << std::endl;
+       
         mapStates.push_back(tileMap.getMapState());
         std::vector<std::vector<int>> currMapState2 = tileMap.getMapState();
-        for (int i = 0; i < currMapState2.size(); i++) {
-            for (int j = 0; j < currMapState2[i].size(); j++) {
-                std::cout << currMapState2[i][j] << ", ";
-            }
-            std::cout << std::endl;
-        }
+        
 
 
 
@@ -279,37 +266,26 @@ void MainGame::update() {
         bulletInteract->interact();
         delete bulletInteract;
     }
-    //std::cout << coordXKillerTank << " " << coordYKillerTank << std::endl;
+    
     if (bullets.size() == 0 || (player.getGridPosition().x != coordXKillerTank && player.getGridPosition().y != coordYKillerTank)) {
-        // std::cout << "should fire bullet " << std::endl;
+
         shouldEnemyFireBullet();
     }
-    else {
-        if (bullets.size() > 0) {
-            std::cout << "bullet vector size is greater than 0" << std::endl;
-        }
-        if (player.getGridPosition().x != coordXKillerTank && player.getGridPosition().y != coordYKillerTank) {
-            std::cout << "player grid position is not coord killer tank position" << std::endl;
-        }
-        std::cout << "bullet not  fired" << std::endl;
-    }
+
     if (bullets.size() > 0) {
         const sf::Time updateInterval = sf::seconds(1.f / 60.f);
         for (int i = 0; i < bullets.size(); i++) {
             bullets[i]->update(updateInterval);
         }
-        if (killPlayer) {
-            std::cout << "player should die" << std::endl;
-        }
-        //std::cout << static_cast<int>(bullet->getPosition().x)/tileSize << " " << static_cast<int>(bullet->getPosition().y)/tileSize << std::endl;
-        //std::cout << player.getGridPosition().x << " " << player.getGridPosition().y << std::endl;
+       
+        
         for (int i = 0; i < bullets.size(); i++) {
 
             sf::Vector2f bulletPos = bullets[i]->getPosition();
             if (static_cast<int>(bulletPos.x) / tileSize == player.getGridPosition().x &&
                 static_cast<int>(bulletPos.y) / tileSize == player.getGridPosition().y) {
                 killPlayer = true;
-                //std::fill(bullets.begin(), bullets.end(), nullptr);
+                
             }
             if (bullets[i]->getPosition().x < 0 || bullets[i]->getPosition().x > windowSizeX ||
                 bullets[i]->getPosition().y < 0 || bullets[i]->getPosition().y > windowSizeY) {
