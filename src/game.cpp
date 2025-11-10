@@ -1,5 +1,6 @@
 #include "../include/game.h"
 #include "../include/playerInteraction.h"
+#include "../include/loadSound.h"
 
 
 MainGame::MainGame(int windowSizeX, int windowSizeY, int level) :
@@ -13,6 +14,8 @@ MainGame::MainGame(int windowSizeX, int windowSizeY, int level) :
     windowSizeY(windowSizeY),
     bullets(0, nullptr)
 {
+    loadMirrorBubbleSound("sounds/bubble.mp3");
+    loadHitWallSoundBuffer("sounds/hitTankSoundAndBrickSound.mp3");
     auto image = sf::Image{};
     std::string iconPath = "Images/tank.png";
 

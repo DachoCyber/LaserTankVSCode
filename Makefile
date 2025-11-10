@@ -13,11 +13,14 @@ INCLUDES := -I"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/include"
             -Iinclude \
             -Itinyxml2
 
-# Library directories and static libs
+# Library directories
 LIBS := -L"SFML-2.6.2-windows-gcc-13.1.0-mingw-32-bit(1)/SFML-2.6.2/lib" \
         -L"CURL/lib" \
-        -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lsfml-network-s \
-        -lopengl32 -lfreetype -lwinmm -lgdi32 -lws2_32 -lbcrypt -lcurl -static-libgcc -static-libstdc++
+        -lsfml-graphics-s -lsfml-window-s -lsfml-audio-s -lsfml-system-s -lsfml-network-s \
+        -lopengl32 -lfreetype -lwinmm -lgdi32 -lws2_32 -lbcrypt \
+        -lopenal32 -lflac -lvorbisenc -lvorbisfile -lvorbis -logg \
+        -lcurl -static-libgcc -static-libstdc++
+
 
 # Source and build directories
 SRC_DIR := src

@@ -1,8 +1,13 @@
 #pragma once
 
+#define SFML_STATIC
+
 #include "bulletInteraction.h"
 #include <SFML/Graphics.hpp>
 #include <memory>
+#include <SFML/Audio.hpp>
+
+
 
 class MainGame {
 public:
@@ -47,6 +52,7 @@ private:
     int startTankY;
 
     int countSpacePressed;
+
 
     int currBulletGridPosX, currBulletGridPosY;
     int nextBulletGridPosX, nextBulletGridPosY;
@@ -96,3 +102,4 @@ private:
     bool isRepeatMovEnabled = false;
     int movesPlayed = 0;
 };
+

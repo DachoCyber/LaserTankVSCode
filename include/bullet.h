@@ -23,7 +23,7 @@ public:
             case UP : case DOWN:
                 shape.setSize(sf::Vector2f(3.f, 20.f));
         }
-        shape.setFillColor(sf::Color::Green);
+        shape.setFillColor(sf::Color(159, 43, 104));
         shape.setOutlineThickness(1.f);
         shape.setPosition(position);
         setVelocity();

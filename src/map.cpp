@@ -18,6 +18,8 @@
 
 #include "../include/flag.h"
 
+#include "../include/tileFactory.h"
+
 #include <stdexcept>
 #include <fstream>
 #include <sstream>
@@ -135,92 +137,16 @@ void Map::buildMap() {
 
     for (int y = 0; y < mapHeight; y++) {
         for (int x = 0; x < mapWidth; x++) {
-            switch(tileMap[y][x]) {
-                case 0:
-                    playerPosX = x;
-                    playerPosY = y;
-                    tiles[y][x] = std::make_unique<WalkableGround>(x*tileSize, y*tileSize, walkableTexture);
-                    break;
-                case 1:
-                    tiles[y][x] = std::make_unique<WalkableGround>(x*tileSize, y*tileSize, walkableTexture);
-                    
-                    break;
-                case 3:
-                    tiles[y][x] = std::make_unique<DestructibleBlock>(x*tileSize, y*tileSize, destructibleTexture);
-                    break;
-                case 4:
-                    tiles[y][x] = std::make_unique<Mirror1Tile>(x*tileSize, y*tileSize, mirror1Texture);
-                    break;
-                case 5: 
-                    tiles[y][x] = std::make_unique<Mirror2Tile>(x*tileSize, y*tileSize, mirror2Texture);
-                    break;
-                case 6:
-                    tiles[y][x] = std::make_unique<Mirror3Tile>(x*tileSize, y*tileSize, mirror3Texture);
-                    break;
-                case 7:
-                    tiles[y][x] = std::make_unique<Mirror4Tile>(x*tileSize, y*tileSize, mirror4Texture);
-                    break;
-                case 8:
-                    tiles[y][x] = std::make_unique<WaterTile>(x*tileSize, y*tileSize, waterTileTexture, waterSecondFrameTexture);
-                    waterTilesCoords.push_back(std::make_pair(y, x));
-                    break;
-                case 9:
-                    tiles[y][x] = std::make_unique<MovableBlock>(x*tileSize, y*tileSize, movableBlockTexture);
-                    break;
-                case 10:
-                    tiles[y][x] = std::make_unique<Flag>(x*tileSize, y*tileSize, flagTexture);
-                    flagCoordX = x*tileSize;
-                    flagCoordY = y*tileSize;
-                    break;
-                case 11:
-                    tiles[y][x] = std::make_unique<UndestructableBlock>(x*tileSize, y*tileSize, undestructableBlockTex);
-                    break;
-                case 12: 
-                    tiles[y][x] = std::make_unique<EnemyTank1>(x*tileSize, y*tileSize, 0, EnemyTank1LeftTexture);
-                    break;
-                case 13:
-                    tiles[y][x] = std::make_unique<EnemyTank1>(x*tileSize, y*tileSize, 1, EnemyTank1RightTexture);
-                    break;
-                case 14:
-                    tiles[y][x] = std::make_unique<EnemyTank1>(x*tileSize, y*tileSize, 2, EnemyTank1UpTexture);
-                    break;
-                case 15:
-                    tiles[y][x] = std::make_unique<EnemyTank1>(x*tileSize, y*tileSize, 3, EnemyTank1DownTexture);
-                    break;
-                case 16: 
-                    tiles[y][x] = std::make_unique<DestroyedTank>(x*tileSize, y*tileSize, 0, destroyedTankLeftTexture);
-                    break;
-                case 17:
-                    tiles[y][x] = std::make_unique<DestroyedTank>(x*tileSize, y*tileSize, 1, destroyedTankUpTexture);
-                    break;
-                case 18:
-                    tiles[y][x] = std::make_unique<DestroyedTank>(x*tileSize, y*tileSize, 2, destroyedTankDownTexture);
-                    break;
-                case 19:
-                    tiles[y][x] = std::make_unique<DestroyedTank>(x*tileSize, y*tileSize, 3, destroyedTankRightTexture);
-                    break;
-                case 20:
-                    tiles[y][x] = std::make_unique<TransportTrack>(x*tileSize, y*tileSize, LEFT, transportTrackLeftTex);
-                    trackTileCoords.push_back(std::make_tuple(y, x, LEFT));
-                    break;
-                case 21:
-                    tiles[y][x] = std::make_unique<TransportTrack>(x*tileSize, y*tileSize, RIGHT, transportTrackRightTex);
-                    trackTileCoords.push_back(std::make_tuple(y, x, RIGHT));
-                    break;
-                case 22:
-                    tiles[y][x] = std::make_unique<TransportTrack>(x*tileSize, y*tileSize, UP, transportTrackUpTex);
-                    trackTileCoords.push_back(std::make_tuple(y, x, UP));
-                    break;
-                case 23:
-                    tiles[y][x] = std::make_unique<TransportTrack>(x*tileSize, y*tileSize, DOWN, transportTrackDownTex);
-                    trackTileCoords.push_back(std::make_tuple(y, x, DOWN));
-                    break;
-                case 50:
-                    tiles[y][x] = std::make_unique<TileInWater>(x*tileSize, y*tileSize, tileInWaterTex);
-                    break;    
-                default:
-                    tiles[y][x] = nullptr; 
-                    break;
+            if(tileMap[y][x] == 0) {
+                playerPosX = x;
+                playerPosY = y;
+            }
+            if(tileMap[y][x] == 8) {
+                waterTilesCoords.push_back(std::make_pair(y, x));
+            }
+            tiles[y][x] = TileFactory :: constructTile(tileMap[y][x], x, y, tileSize);
+            if(!tiles[y][x]) {
+                std::cout << "je nula" << std::endl;
             }
         
         }
@@ -359,60 +285,60 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
             // Check if we're moving from a position that was originally water
             std::cout << "enter here" << std::endl << std::endl;
         
-        for (auto it = tilesInWaterCoords.begin(); it != tilesInWaterCoords.end(); ++it) {
-            if (it->first == oldGridPosY && it->second == oldGridPosX) {
-                wasWaterTile = true;
-                std::cout << it->first << ", " << it->second << std::endl;
-                //std::cout << "was water tile on position  " << oldGridPosX << " " << oldGridPosY << std::endl;
-                //tilesInWaterCoords.erase(it);
-                std::cout << "wasWaterTile = true, ";
-                //tileMap[it->first][it->second] = 50;
-                break;
+            for (auto it = tilesInWaterCoords.begin(); it != tilesInWaterCoords.end(); ++it) {
+                if (it->first == oldGridPosY && it->second == oldGridPosX) {
+                    wasWaterTile = true;
+                    std::cout << it->first << ", " << it->second << std::endl;
+                    //std::cout << "was water tile on position  " << oldGridPosX << " " << oldGridPosY << std::endl;
+                    //tilesInWaterCoords.erase(it);
+                    std::cout << "wasWaterTile = true, ";
+                    //tileMap[it->first][it->second] = 50;
+                    break;
+                }
             }
-        }
 
-        // Check if we're moving to a water tile
-        
-        for (auto it = waterTilesCoords.begin(); it != waterTilesCoords.end(); ++it) {
-            if (it->first == newGridPosY && it->second == newGridPosX) {
-                movingToWater = true;
-                //std::cout << "moving to water to position  " << newGridPosY << " " << newGridPosX << std::endl;
-                std::cout << "MovingToWater = true, " << std::endl;
-                break;
+            // Check if we're moving to a water tile
+            
+            for (auto it = waterTilesCoords.begin(); it != waterTilesCoords.end(); ++it) {
+                if (it->first == newGridPosY && it->second == newGridPosX) {
+                    movingToWater = true;
+                    //std::cout << "moving to water to position  " << newGridPosY << " " << newGridPosX << std::endl;
+                    std::cout << "MovingToWater = true, " << std::endl;
+                    break;
+                }
             }
-        }
-        bool wasGround = !(tiles[oldGridPosY][oldGridPosX] -> isWater());
-        //movingToWater = true;
-        
-        
-        for(int i = 0; i < erasedWaterTiles.size(); i++) {
-            if(oldGridPosX == erasedWaterTiles[i].second && oldGridPosY == erasedWaterTiles[i].first) {
-                erasedWaterTilesExists = true;
-                std::cout << "ErasedWaterTilesExists = true, " << std::endl;
+            bool wasGround = !(tiles[oldGridPosY][oldGridPosX] -> isWater());
+            //movingToWater = true;
+            
+            
+            for(int i = 0; i < erasedWaterTiles.size(); i++) {
+                if(oldGridPosX == erasedWaterTiles[i].second && oldGridPosY == erasedWaterTiles[i].first) {
+                    erasedWaterTilesExists = true;
+                    std::cout << "ErasedWaterTilesExists = true, " << std::endl;
+                }
             }
-        }
-        // 2. Move the tile
-        tiles[newGridPosY][newGridPosX] = std::move(tiles[oldGridPosY][oldGridPosX]);
+            // 2. Move the tile
+            tiles[newGridPosY][newGridPosX] = std::move(tiles[oldGridPosY][oldGridPosX]);
+            
+            // 3. Update the moved tile's position
+            tiles[newGridPosY][newGridPosX]->setPosition(newGridPosX * tileSize, newGridPosY * tileSize);
+            
+            // 4. Update tileMap to maintain consistency
+            std::cout << "tile map at 359 line tileMap[" << newGridPosY << "][" << newGridPosX << "] = " << "1" << std::endl;
+            //tileMap[newGridPosY][newGridPosX] = tileMap[oldGridPosY][oldGridPosX];
+            //tileMap[newGridPosY][newGridPosX] = 1;
+            // 5. Handle the old position
         
-        // 3. Update the moved tile's position
-        tiles[newGridPosY][newGridPosX]->setPosition(newGridPosX * tileSize, newGridPosY * tileSize);
-        
-        // 4. Update tileMap to maintain consistency
-        std::cout << "tile map at 359 line tileMap[" << newGridPosY << "][" << newGridPosX << "] = " << "1" << std::endl;
-        //tileMap[newGridPosY][newGridPosX] = tileMap[oldGridPosY][oldGridPosX];
-        //tileMap[newGridPosY][newGridPosX] = 1;
-        // 5. Handle the old position
-    
-        
-        if ((wasWaterTile && movingToWater)) {
-            // Restore the water tile
-            tiles[oldGridPosY][oldGridPosX] = std::make_unique<TileInWater>(oldGridPosX * tileSize, oldGridPosY * tileSize, tileInWaterTex);
-            std::cout << "tile map at 366 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << "50" << std::endl;
-            tileMap[oldGridPosY][oldGridPosX] = 1;/* whatever value represents water tiles */
-            //std::cout << "jeste " << std::endl;
-            /*waterTilesCoords.remove_if([oldGridPosY, oldGridPosX](const std::pair<int, int>& p) {
-                return p.first == oldGridPosY && p.second == oldGridPosX;
-                });*/
+            
+            if ((wasWaterTile && movingToWater)) {
+                // Restore the water tile
+                tiles[oldGridPosY][oldGridPosX] = std::make_unique<TileInWater>(oldGridPosX * tileSize, oldGridPosY * tileSize, tileInWaterTex);
+                std::cout << "tile map at 366 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << "50" << std::endl;
+                tileMap[oldGridPosY][oldGridPosX] = 1;/* whatever value represents water tiles */
+                //std::cout << "jeste " << std::endl;
+                /*waterTilesCoords.remove_if([oldGridPosY, oldGridPosX](const std::pair<int, int>& p) {
+                    return p.first == oldGridPosY && p.second == oldGridPosX;
+                    });*/
         } else {
           
                 if(erasedWaterTilesExists) {
@@ -530,85 +456,7 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
         for (int y = 0; y < mapHeight; y++) {
             for (int x = 0; x < mapWidth; x++) {
                 int code = (*lastMapState)[y][x];
-                std::unique_ptr<Tile> tile;
-
-                switch (code) {
-                case 0:
-                    tile = std::make_unique<WalkableGround>(x * tileSize, y * tileSize, walkableTexture);
-                    break;
-                case 1:
-                    tile = std::make_unique<WalkableGround>(x * tileSize, y * tileSize, walkableTexture);
-                    break;
-                case 3:
-                    tile = std::make_unique<DestructibleBlock>(x * tileSize, y * tileSize, destructibleTexture);
-                    break;
-                case 4:
-                    tile = std::make_unique<Mirror1Tile>(x * tileSize, y * tileSize, mirror1Texture);
-                    break;
-                case 5:
-                    tile = std::make_unique<Mirror2Tile>(x * tileSize, y * tileSize, mirror2Texture);
-                    break;
-                case 6:
-                    tile = std::make_unique<Mirror3Tile>(x * tileSize, y * tileSize, mirror3Texture);
-                    break;
-                case 7:
-                    tile = std::make_unique<Mirror4Tile>(x * tileSize, y * tileSize, mirror4Texture);
-                    break;
-                case 8:
-                    tile = std::make_unique<WaterTile>(x * tileSize, y * tileSize, waterTileTexture, waterSecondFrameTexture);
-                    break;
-                case 9:
-                    tile = std::make_unique<MovableBlock>(x * tileSize, y * tileSize, movableBlockTexture);
-                    break;
-                case 10:
-                    tile = std::make_unique<Flag>(x * tileSize, y * tileSize, flagTexture);
-                    break;
-                case 11:
-                    tile = std::make_unique<UndestructableBlock>(x * tileSize, y * tileSize, undestructableBlockTex);
-                    break;
-                case 12:
-                    tile = std::make_unique<EnemyTank1>(x * tileSize, y * tileSize, 0, EnemyTank1LeftTexture);
-                    break;
-                case 13:
-                    tile = std::make_unique<EnemyTank1>(x * tileSize, y * tileSize, 1, EnemyTank1RightTexture);
-                    break;
-                case 14:
-                    tile = std::make_unique<EnemyTank1>(x * tileSize, y * tileSize, 2, EnemyTank1UpTexture);
-                    break;
-                case 15:
-                    tile = std::make_unique<EnemyTank1>(x * tileSize, y * tileSize, 3, EnemyTank1DownTexture);
-                    break;
-                case 16:
-                    tile = std::make_unique<DestroyedTank>(x * tileSize, y * tileSize, 0, destroyedTankLeftTexture);
-                    break;
-                case 17:
-                    tile = std::make_unique<DestroyedTank>(x * tileSize, y * tileSize, 1, destroyedTankUpTexture);
-                    break;
-                case 18:
-                    tile = std::make_unique<DestroyedTank>(x * tileSize, y * tileSize, 2, destroyedTankDownTexture);
-                    break;
-                case 19:
-                    tile = std::make_unique<DestroyedTank>(x * tileSize, y * tileSize, 3, destroyedTankRightTexture);
-                    break;
-                case 20:
-                    tile = std::make_unique<TransportTrack>(x * tileSize, y * tileSize, LEFT, transportTrackLeftTex);
-                    break;
-                case 21:
-                    tile = std::make_unique<TransportTrack>(x * tileSize, y * tileSize, RIGHT, transportTrackRightTex);
-                    break;
-                case 22:
-                    tile = std::make_unique<TransportTrack>(x * tileSize, y * tileSize, UP, transportTrackUpTex);
-                    break;
-                case 23:
-                    tile = std::make_unique<TransportTrack>(x * tileSize, y * tileSize, DOWN, transportTrackDownTex);
-                    break;
-                case 50:
-                    tile = std::make_unique<TileInWater>(x * tileSize, y * tileSize, tileInWaterTex);
-                    break;
-                default:
-                    tile = nullptr;
-                    break;
-                }
+                std::unique_ptr<Tile> tile = TileFactory :: constructTile(code, x, y, tileSize);
 
                 tiles[y][x] = std::move(tile);
                 tileMap[y][x] = code;
