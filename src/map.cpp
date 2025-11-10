@@ -144,6 +144,15 @@ void Map::buildMap() {
             if(tileMap[y][x] == 8) {
                 waterTilesCoords.push_back(std::make_pair(y, x));
             }
+            if(tileMap[y][x] == 20) {
+                trackTileCoords.push_back(std::make_tuple(y, x, LEFT));
+            } else if(tileMap[y][x] == 21) {
+                trackTileCoords.push_back(std::make_tuple(y, x, RIGHT));
+            } else if(tileMap[y][x] == 22) {
+                trackTileCoords.push_back(std::make_tuple(y, x, UP));
+            } else {
+                trackTileCoords.push_back(std::make_tuple(y, x, DOWN));
+            }
             tiles[y][x] = TileFactory :: constructTile(tileMap[y][x], x, y, tileSize);
             if(!tiles[y][x]) {
                 std::cout << "je nula" << std::endl;
