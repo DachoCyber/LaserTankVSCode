@@ -28,8 +28,6 @@ void BulletInteraction :: interact() {
 
     player.getBullet()->update(timePerFrame);
 
-    std::cout << player.getGridPosition().x << " " << player.getGridPosition().y << std::endl;
-    
     if(player.getBullet()->getPosition().x >= windowSizeX || player.getBullet()->getPosition().x < 0 ||
         player.getBullet()->getPosition().y >= windowSizeY || player.getBullet()->getPosition().y < 0) {
             
@@ -261,16 +259,14 @@ if(tileMap.getTileMap()[bulletGridPosY][bulletGridPosX]
     // First ensure bullet is actually on the mirror tile
     //if(!(bulletGridPosX == lastBulletGridPosX && bulletGridPosY == lastBulletGridPosY))
     //{
-        // Hit from left - reflect up
-        if(lastBulletGridPosX < bulletGridPosX || (player.getGridPosition().x - bulletGridPosX == 1 && player.getGridPosition().y == bulletGridPosY)) {
+        // Hit from left - reflect down
+        if(lastBulletGridPosX < bulletGridPosX || (-player.getGridPosition().x + bulletGridPosX == 1 && player.getGridPosition().y == bulletGridPosY)) {
             player.getBullet()->changeVelocity(UP, 3);
             player.getBullet() -> dir = UP;
-            mirrorSound.play();
         }
         // Hit from right - move mirror left
         else if(lastBulletGridPosX > bulletGridPosX || player.getGridPosition().x - bulletGridPosX == 1) {
             if(bulletGridPosX > 0) {  // Can we move left?
-                playBulletHitSound = true;
                 bool canMove = (player.getGridPosition().x != bulletGridPosX - 1 || player.getGridPosition().y != bulletGridPosY)
                               && bulletGridPosX > 0 && !tileMap.getTileMap()[bulletGridPosY][bulletGridPosX - 1] || 
                              tileMap.getTileMap()[bulletGridPosY][bulletGridPosX - 1]->isOverlappled();
@@ -286,19 +282,15 @@ if(tileMap.getTileMap()[bulletGridPosY][bulletGridPosX]
         else if(lastBulletGridPosY < bulletGridPosY || (-player.getGridPosition().y + bulletGridPosY == 1 && player.getGridPosition().x == bulletGridPosX)) {
             player.getBullet()->changeVelocity(LEFT, 3);
             player.getBullet() -> dir = LEFT;
-            mirrorSound.play();
         }
         // Hit from top - move mirror down
-        else if(lastBulletGridPosY > bulletGridPosY || (player.getGridPosition().x == bulletGridPosX)) {
-            std::cout << "Mirror should move down!" << std::endl;
+        else if(lastBulletGridPosY > bulletGridPosY || player.getGridPosition().y - bulletGridPosY == 1) {
             if(bulletGridPosY > 0) {  // Can we move down?
-                playBulletHitSound = true;
                 bool canMove = (player.getGridPosition().x != bulletGridPosX || player.getGridPosition().y != bulletGridPosY - 1) &&
                              bulletGridPosY > 0 && (!tileMap.getTileMap()[bulletGridPosY - 1][bulletGridPosX] || 
                              tileMap.getTileMap()[bulletGridPosY - 1][bulletGridPosX]->isOverlappled());
                 
                 if(canMove) {
-                    //std::cout << "Mirror is moving down" <<
                     tileMap.moveTile(bulletGridPosY - 1, bulletGridPosX,
                                    bulletGridPosY, bulletGridPosX);
                 }
@@ -309,13 +301,12 @@ if(tileMap.getTileMap()[bulletGridPosY][bulletGridPosX]
     if(tileMap.getTileMap()[bulletGridPosY][bulletGridPosX]
     && tileMap.getTileMap()[bulletGridPosY][bulletGridPosX]->isMirror4()) 
 {   
-    std::cout << lastBulletGridPosX << " " << lastBulletGridPosY << " " << bulletGridPosX << " "<< bulletGridPosY << std::endl;
+
     // First ensure bullet is actually on the mirror tile
     //if(!(bulletGridPosX == lastBulletGridPosX && bulletGridPosY == lastBulletGridPosY))
     //{
         // Hit from left - reflect down
         if(lastBulletGridPosX > bulletGridPosX || (player.getGridPosition().x - bulletGridPosX == 1 && player.getGridPosition().y == bulletGridPosY)) {
-            std::cout << static_cast<int>(player.getBullet() -> getPosition().x/tileSize) << "    " << bulletGridPosX << std::endl;
             player.getBullet()->changeVelocity(UP, 3);
             player.getBullet() -> dir = UP;
             mirrorSound.play();

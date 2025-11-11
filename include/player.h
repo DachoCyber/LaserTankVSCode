@@ -6,6 +6,15 @@
 #include "direction.h" 
 #include "map.h"
 
+struct PlayerState {
+    Direction dir;
+    sf::Vector2i playerPos;
+
+    PlayerState(Direction dir, sf::Vector2i playerPos)
+        : dir(dir), playerPos(playerPos) {}
+};
+
+
 class Tank : public sf::Drawable {
 public:
     Tank(int startX, int startY, int windowSizeX, int windowSizeY);
@@ -16,6 +25,9 @@ public:
 
     void setShouldKillPlayer() {
         shouldKillPlayer = true;
+    }
+    std::vector<PlayerState>& getPlayerStates() { 
+        return playerStates; 
     }
     bool getShouldKillPlayer();
 
@@ -44,6 +56,8 @@ public:
     int getPositionY() const {return sprite.getPosition().y;}
 
 private:
+
+    std::vector<PlayerState> playerStates;
 
     bool shouldKillPlayer = false;
 

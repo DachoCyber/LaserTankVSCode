@@ -42,6 +42,7 @@ private:
     void render();
     void update();
 
+    std::vector<std::string> tankMovedOrBulletShot;
     std::unique_ptr<sf::RenderWindow> window;
     Tank player;
     Map tileMap;

@@ -3,7 +3,6 @@
 
 std::unique_ptr<Tile> TileFactory :: constructTile(int code, int x, int y, int tileSize) {
     std::unique_ptr<Tile> tile;
-    std::cout << code << std::endl;
     switch (code) {
                 case 0:
                     tile = std::make_unique<WalkableGround>(x * tileSize, y * tileSize, walkableTexture);

@@ -5,12 +5,13 @@ Tank::Tank(int gridPosX, int gridPosY, int windowSizeX, int windowSizeY)
     :
     dir(RIGHT),
     windowSizeX(windowSizeX),
-    windowSizeY(windowSizeY)
+    windowSizeY(windowSizeY),
+    playerStates({PlayerState{dir, sf::Vector2i(gridPosX, gridPosY)}})
 {
     tankImg.loadFromFile("Images/tank.png");
     texture.loadFromImage(tankImg);
     sprite.setTexture(texture);
-    //std::cout << gridPosX << " " << gridPosY << std::endl;
+    
     sprite.setScale(sf::Vector2f(0.65, 0.65));  
     sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
     setDir(dir);
@@ -119,28 +120,24 @@ bool Tank :: deleteAdjBlockIfExists(Map& tileMap) {
         case UP:
             if(y - 1 >= 0 && tileMap.getTileMap()[y-1][x]->isBulletDestroyable()) {
                 tileMap.destroyTile(x, y - 1);
-                std::cout << "bullet not fired!" << std::endl;
                 return true;
             }
             break;
         case DOWN:
             if(y + 1 < tileMap.getTileMap().size() && tileMap.getTileMap()[y + 1][x]->isBulletDestroyable()) {
                 tileMap.destroyTile(x, y + 1);
-                std::cout << "bullet not fired" << std::endl;
                 return true;
             }
             break;
         case LEFT:
             if(x - 1 >= 0 && tileMap.getTileMap()[y][x - 1]->isBulletDestroyable()) {
                 tileMap.destroyTile(x - 1, y);
-                std::cout << "bullet not fired" << std::endl;
                 return true;
             }
             break;
         case RIGHT:
             if(x + 1 < tileMap.getTileMap()[y].size() && tileMap.getTileMap()[y][x + 1]->isBulletDestroyable()) {
                 tileMap.destroyTile(x + 1, y);
-                std::cout << "bullet not fired" << std::endl;
                 return true;
             }
             break;

@@ -22,12 +22,16 @@ void PlayerInteraction :: handleMovement() {
     bool moved = false;
 
     
+    bool staySame = false;
+    Direction dir = player.getDir();
 
     // UP
     if(pressedKey == sf::Keyboard::Key::Up) {
         if(player.getBullet() == nullptr) {
             if(player.getDir() != UP) {
                 player.setDir(UP);
+                staySame = true;
+                dir = UP;
             } else {
                 if(validMove(newGridPos.x, newGridPos.y - 1)) {
                     bool notUpTrack = tileMap.getTileMap()[newGridPos.y - 1][newGridPos.x] -> isTransportTrack() != 4;
@@ -42,6 +46,8 @@ void PlayerInteraction :: handleMovement() {
                 }
             }
         }
+        sf::Vector2i position = player.getGridPosition();
+        player.getPlayerStates().push_back({dir, position});
     }
 
     // DOWN
@@ -49,6 +55,8 @@ void PlayerInteraction :: handleMovement() {
         if(player.getBullet() == nullptr) {
             if(player.getDir() != DOWN) {
                 player.setDir(DOWN);
+                staySame = true;
+                dir = DOWN;
             } else {
                 if(validMove(newGridPos.x, newGridPos.y + 1)) {
                     bool notDownTrack = tileMap.getTileMap()[newGridPos.y + 1][newGridPos.x] -> isTransportTrack() != 3;
@@ -63,6 +71,8 @@ void PlayerInteraction :: handleMovement() {
                 }
             }
         }
+        sf::Vector2i position = player.getGridPosition();
+        player.getPlayerStates().push_back({dir, position});
     }
 
     
@@ -71,12 +81,14 @@ void PlayerInteraction :: handleMovement() {
     if(pressedKey == sf::Keyboard::Key::Left && player.getBullet() == nullptr) {
         if(player.getDir() != LEFT) {
             player.setDir(LEFT);
+            staySame = true;
+            dir = LEFT;
         } else {
             if(validMove(newGridPos.x - 1, newGridPos.y)) {
-                //std::cout << "this is good!" << std::endl;
+                
                 bool notLeftTrack = tileMap.getTileMap()[newGridPos.y][newGridPos.x - 1] -> isTransportTrack() != 2;
                 if(notLeftTrack) {
-                    //std::cout << "this is also good!" << std::endl;
+                    
                     if(tileMap.getTileMap()[newGridPos.y][newGridPos.x - 1] -> isWalkable()) {
 
                         newGridPos.x -= 1;
@@ -85,6 +97,8 @@ void PlayerInteraction :: handleMovement() {
                 }
             }
         }
+        sf::Vector2i position = player.getGridPosition();
+        player.getPlayerStates().push_back({dir, position});
     }
     
 
@@ -93,6 +107,8 @@ void PlayerInteraction :: handleMovement() {
         if(player.getBullet() == nullptr) {
             if(player.getDir() != RIGHT) {
                 player.setDir(RIGHT);
+                staySame = true;
+                dir = RIGHT;
             } else {
                 if(validMove(newGridPos.y, newGridPos.x + 1)) {
                     bool notRightTrack = tileMap.getTileMap()[newGridPos.y][newGridPos.x + 1] -> isTransportTrack() != 1;
@@ -107,8 +123,13 @@ void PlayerInteraction :: handleMovement() {
                 }
                 
             }
+            
         }
+        sf::Vector2i position = player.getGridPosition();
+        player.getPlayerStates().push_back({dir, position});
     }
+
+    
 
     // SPACE
     if(pressedKey == sf::Keyboard::Key::Space && player.getBullet() == nullptr) {
@@ -125,26 +146,3 @@ void PlayerInteraction :: handleMovement() {
         }
     }
 }
-/*
-void PlayerInteraction :: handlTransportableTrack(int y, int x) {
-    player.setDir(LEFT);
-    if(validMove(x - 1, y)) {
-
-            if(tileMap.getTileMap()[y][x-1] -> isTileMovableBlock() || 
-                tileMap.getTileMap()[y][x-1] -> isBulletDestroyable() ||
-                tileMap.getTileMap()[y][x-1] -> isMirror1() ||
-                tileMap.getTileMap()[y][x-1] -> isMirror2() ||
-                tileMap.getTileMap()[y][x-1] -> isMirror3() ||
-                tileMap.getTileMap()[y][x-1] -> isMirror4() ||
-                tileMap.getTileMap()[y][x-1] -> isTank()) {
-                    //std::cout << "here" << std::endl;
-                    return;
-            }
-            int currGridCoordX = x;
-            int currGridCoordY = y;
-
-            //std::cout << player.getGridPosition().x << std::endl;
-            player.setGridPosition(sf::Vector2i(x - 1, y));
-            //std::cout << player.getGridPosition().x << std::endl;
-        }
-}*/

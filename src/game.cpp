@@ -159,92 +159,73 @@ void MainGame::handleInput() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         movesPlayed++;
         pressedKey = sf::Keyboard::Up;
-
-
+        tankMovedOrBulletShot.push_back("tank moved");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
         movesPlayed++;
         pressedKey = sf::Keyboard::Down;
+        tankMovedOrBulletShot.push_back("tank moved");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         movesPlayed++;
         pressedKey = sf::Keyboard::Left;
+        tankMovedOrBulletShot.push_back("tank moved");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         movesPlayed++;
         pressedKey = sf::Keyboard::Right;
+        tankMovedOrBulletShot.push_back("tank moved");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         movesPlayed++;
         pressedKey = sf::Keyboard::Space;
+        tankMovedOrBulletShot.push_back("bullet shot");
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::U) && moveCount > 0) {
-        moveCount--;
-        movesPlayed--;
-        
-        tileMap.undoMove(&mapStates.back());
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::U) && 
+        (!mapStates.empty() || !player.getPlayerStates().empty())) 
+    {
+        if (movesPlayed > 0)
+            movesPlayed--;
 
-        if(playerPositions.size() < 2) {
-            return;
-		}
-
-        if(arrOfMoves.back() != sf::Keyboard::Space) {
-            player.setGridPosition(sf::Vector2i(
-                playerPositions[playerPositions.size() - 1].first,
-                playerPositions[playerPositions.size() - 1].second));
+        std::cout << "Current move count is: " << moveCount 
+                << ".\nNumber of moves played: " << movesPlayed << "\n";
+        std::cout << "Size of vector playerPositions is " << playerPositions.size() << std::endl;
 
 
-            if (playerPositions.size() > 0) {
+        if (!tankMovedOrBulletShot.empty()) {
+            std::string lastAction = tankMovedOrBulletShot.back();
 
-                playerPositions.pop_back(); // Remove last move
+            if (lastAction == "bullet shot") {
+                    
+                if (!mapStates.empty()) {
+                    tileMap.undoMove(&mapStates.back());
+                    mapStates.pop_back();
+                }
+            } 
+            else if (lastAction == "tank moved") {
+                
+                if (!player.getPlayerStates().empty()) {
+                    player.setGridPosition(player.getPlayerStates().back().playerPos);
+                    player.setDir(player.getPlayerStates().back().dir);
+                    player.getPlayerStates().pop_back();
+                    
+                }
             }
 
-			//arrOfMoves.pop_back();
-		}
-
-		arrOfMoves.pop_back();
-        mapStates.pop_back();
+                
+            tankMovedOrBulletShot.pop_back();
+        }
 
         return;
     }
 
     if (pressedKey != sf::Keyboard::Unknown) {
+        if(tankMovedOrBulletShot.back() == "bullet shot") 
+            mapStates.push_back(tileMap.getMapState());
 
-	    arrOfMoves.push_back(pressedKey);
-
-        std::vector<std::pair<sf::Keyboard::Key, Direction>> keyDirPairs =
-        { std::make_pair(sf::Keyboard::Up, UP),
-          std::make_pair(sf::Keyboard::Down, DOWN),
-          std::make_pair(sf::Keyboard::Left, LEFT),
-          std::make_pair(sf::Keyboard::Right, RIGHT) };
-
-        for (int i = 0; i < 4; i++) {
-
-            if (pressedKey == keyDirPairs[i].first && player.getDir() == keyDirPairs[i].second) {
-                
-                playerPositions.push_back(std::make_pair<int, int>(
-                    player.getGridPosition().x, player.getGridPosition().y));
-
-
-                break;
-            }
-        }
-        // Save state BEFORE movement
-       
-        mapStates.push_back(tileMap.getMapState());
-        std::vector<std::vector<int>> currMapState2 = tileMap.getMapState();
-        
-
-
-
-        PlayerInteraction* playerInteraction = new PlayerInteraction(windowSizeX, windowSizeY, player, tileMap, pressedKey);
-        playerInteraction->handleMovement();
-        delete playerInteraction;
-        
-		
-        
-        playerMoved = true;
-        moveCount++;
+        std::cout << "Size of player states: " << player.getPlayerStates().size() << std::endl;       
+        PlayerInteraction playerInteraction(windowSizeX, windowSizeY, player, tileMap, pressedKey);
+        playerInteraction.handleMovement();
     }
 
     if (tileMap.getTileMap()[player.getGridPosition().y][player.getGridPosition().x]->isTransportTrack() && returnFromTrack && pressedKey != sf::Keyboard::Unknown) {
@@ -265,9 +246,8 @@ void MainGame::update() {
 
     if (player.getBullet() != nullptr) {
 
-        BulletInteraction* bulletInteract = new BulletInteraction(windowSizeX, windowSizeY, player, tileMap);
-        bulletInteract->interact();
-        delete bulletInteract;
+        BulletInteraction bulletInteract(windowSizeX, windowSizeY, player, tileMap);
+        bulletInteract.interact();
     }
     
     if (bullets.size() == 0 || (player.getGridPosition().x != coordXKillerTank && player.getGridPosition().y != coordYKillerTank)) {

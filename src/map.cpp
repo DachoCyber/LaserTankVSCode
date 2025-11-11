@@ -37,8 +37,6 @@ Map::Map(int level) {
 
     loadTextures();
     buildMap();
-
-    std::cout << "SUCCESS" << std::endl;
 }
 
 
@@ -150,13 +148,10 @@ void Map::buildMap() {
                 trackTileCoords.push_back(std::make_tuple(y, x, RIGHT));
             } else if(tileMap[y][x] == 22) {
                 trackTileCoords.push_back(std::make_tuple(y, x, UP));
-            } else {
+            } else if(tileMap[y][x] == 23) {
                 trackTileCoords.push_back(std::make_tuple(y, x, DOWN));
             }
             tiles[y][x] = TileFactory :: constructTile(tileMap[y][x], x, y, tileSize);
-            if(!tiles[y][x]) {
-                std::cout << "je nula" << std::endl;
-            }
         
         }
 
