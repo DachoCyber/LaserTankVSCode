@@ -65,7 +65,7 @@ private:
     int playerPosX;
     int playerPosY;
     
-    std::list<std::pair<int, int>> waterTilesCoords;
+    std::list<std::pair<int, int>> waterTilesCoords; // done
     
     std::vector<std::vector<int>> tileMap;
     std::vector<std::vector<sf::Sprite>> sprites;

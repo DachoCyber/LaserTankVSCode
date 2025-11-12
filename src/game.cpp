@@ -184,13 +184,12 @@ void MainGame::handleInput() {
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::U) && 
         (!mapStates.empty() || !player.getPlayerStates().empty())) 
     {
-        if (movesPlayed > 0)
+    
+        
+        if (movesPlayed > 0) {
+
             movesPlayed--;
-
-        std::cout << "Current move count is: " << moveCount 
-                << ".\nNumber of moves played: " << movesPlayed << "\n";
-        std::cout << "Size of vector playerPositions is " << playerPositions.size() << std::endl;
-
+        }
 
         if (!tankMovedOrBulletShot.empty()) {
             std::string lastAction = tankMovedOrBulletShot.back();
@@ -198,7 +197,9 @@ void MainGame::handleInput() {
             if (lastAction == "bullet shot") {
                     
                 if (!mapStates.empty()) {
+                    
                     tileMap.undoMove(&mapStates.back());
+                    
                     mapStates.pop_back();
                 }
             } 
@@ -223,7 +224,6 @@ void MainGame::handleInput() {
         if(tankMovedOrBulletShot.back() == "bullet shot") 
             mapStates.push_back(tileMap.getMapState());
 
-        std::cout << "Size of player states: " << player.getPlayerStates().size() << std::endl;       
         PlayerInteraction playerInteraction(windowSizeX, windowSizeY, player, tileMap, pressedKey);
         playerInteraction.handleMovement();
     }

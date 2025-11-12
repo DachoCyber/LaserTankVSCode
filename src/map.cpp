@@ -287,15 +287,13 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
         if(tiles[oldGridPosY][oldGridPosX] -> isTileInWater() || tiles[oldGridPosY][oldGridPosX] -> isMovableTypeOfBlock()) {
            // std::cout << "eeeeeeee" << std::endl;
             // Check if we're moving from a position that was originally water
-            std::cout << "enter here" << std::endl << std::endl;
+            
         
             for (auto it = tilesInWaterCoords.begin(); it != tilesInWaterCoords.end(); ++it) {
                 if (it->first == oldGridPosY && it->second == oldGridPosX) {
                     wasWaterTile = true;
-                    std::cout << it->first << ", " << it->second << std::endl;
                     //std::cout << "was water tile on position  " << oldGridPosX << " " << oldGridPosY << std::endl;
                     //tilesInWaterCoords.erase(it);
-                    std::cout << "wasWaterTile = true, ";
                     //tileMap[it->first][it->second] = 50;
                     break;
                 }
@@ -307,7 +305,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
                 if (it->first == newGridPosY && it->second == newGridPosX) {
                     movingToWater = true;
                     //std::cout << "moving to water to position  " << newGridPosY << " " << newGridPosX << std::endl;
-                    std::cout << "MovingToWater = true, " << std::endl;
                     break;
                 }
             }
@@ -318,7 +315,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
             for(int i = 0; i < erasedWaterTiles.size(); i++) {
                 if(oldGridPosX == erasedWaterTiles[i].second && oldGridPosY == erasedWaterTiles[i].first) {
                     erasedWaterTilesExists = true;
-                    std::cout << "ErasedWaterTilesExists = true, " << std::endl;
                 }
             }
             // 2. Move the tile
@@ -328,8 +324,7 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
             tiles[newGridPosY][newGridPosX]->setPosition(newGridPosX * tileSize, newGridPosY * tileSize);
             
             // 4. Update tileMap to maintain consistency
-            std::cout << "tile map at 359 line tileMap[" << newGridPosY << "][" << newGridPosX << "] = " << "1" << std::endl;
-            //tileMap[newGridPosY][newGridPosX] = tileMap[oldGridPosY][oldGridPosX];
+            
             //tileMap[newGridPosY][newGridPosX] = 1;
             // 5. Handle the old position
         
@@ -337,7 +332,7 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
             if ((wasWaterTile && movingToWater)) {
                 // Restore the water tile
                 tiles[oldGridPosY][oldGridPosX] = std::make_unique<TileInWater>(oldGridPosX * tileSize, oldGridPosY * tileSize, tileInWaterTex);
-                std::cout << "tile map at 366 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << "50" << std::endl;
+                
                 tileMap[oldGridPosY][oldGridPosX] = 1;/* whatever value represents water tiles */
                 //std::cout << "jeste " << std::endl;
                 /*waterTilesCoords.remove_if([oldGridPosY, oldGridPosX](const std::pair<int, int>& p) {
@@ -348,7 +343,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
                 if(erasedWaterTilesExists) {
                     tiles[oldGridPosY][oldGridPosX] = std::make_unique<TileInWater>(oldGridPosX * tileSize, oldGridPosY * tileSize, tileInWaterTex);
                     tileMap[oldGridPosY][oldGridPosX] = 50;
-                    std::cout << "tile map at 374 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << "50" << std::endl;
                     
 
                 }
@@ -356,7 +350,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
 
                     tiles[oldGridPosY][oldGridPosX] = std::make_unique<WalkableGround>(oldGridPosX * tileSize, oldGridPosY * tileSize, walkableTexture);
                     tileMap[oldGridPosY][oldGridPosX] = 1; // Assuming 1 is walkable ground
-                    std::cout << "tile map at 380 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << "1" << std::endl;
                 }
                 //std::cout << "hereeeee" << std::endl;
             
@@ -365,7 +358,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
                 if (movingToWater) {
                     tilesInWaterCoords.emplace_back(newGridPosY, newGridPosX);
                     tileMap[newGridPosY][newGridPosX] = 50;
-                    std::cout << "tile map at 388 line tileMap[" << newGridPosY << "][" << newGridPosX << "] = " << "50" << std::endl;
                 }
         }
             
@@ -380,7 +372,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
 
                         tiles[oldGridPosY][oldGridPosX] = std::make_unique<WalkableGround>(oldGridPosX * tileSize, oldGridPosY * tileSize, walkableTexture);
                         tileMap[oldGridPosY][oldGridPosX] = 1;
-                        std::cout << "tile map at 403 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " <<"1" << std::endl;
                     /*} else {
                         tiles[oldGridPosY][oldGridPosX] = std::make_unique<TileInWater>(oldGridPosX*tileSize, oldGridPosY*tileSize);
                     }*/
@@ -394,8 +385,6 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
         
             // 4. Update tileMap to maintain consistency
             tileMap[newGridPosY][newGridPosX] = tileMap[oldGridPosY][oldGridPosX];
-            std::cout << "tile map at 403 line tileMap[" << oldGridPosY << "][" << oldGridPosX << "] = " << tileMap[oldGridPosY][oldGridPosX] << std::endl;
-        
             // 5. Create new walkable ground at old position
             tiles[oldGridPosY][oldGridPosX] = std::make_unique<WalkableGround>(oldGridPosX * tileSize, oldGridPosY * tileSize, walkableTexture);
             tileMap[oldGridPosY][oldGridPosX] = 1; // Assuming 1 is walkable ground
@@ -452,18 +441,57 @@ void Map :: moveTile(int newGridPosY, int newGridPosX, int oldGridPosY, int oldG
     void Map::setTilesEl(size_t i, size_t j, std::unique_ptr<Tile> newElement) {
         if (i < tiles.size() && j < tiles[i].size()) {
             tiles[i][j] = std::move(newElement);
-        } else {
         }
     }
 
     void Map::undoMove(std::vector<std::vector<int>>* lastMapState) {
-        for (int y = 0; y < mapHeight; y++) {
-            for (int x = 0; x < mapWidth; x++) {
-                int code = (*lastMapState)[y][x];
-                std::unique_ptr<Tile> tile = TileFactory :: constructTile(code, x, y, tileSize);
+        std::cout << "Pre undo: " << std::endl;
+        for(int y = 0; y < mapHeight; ++y) {
+            for(int x = 0; x < mapWidth; ++x) {
+                if(tileMap[y][x] == 50) 
+                    std::cout << "Na poziciji " << y << ", " << x << " je most." << std::endl;
+            }
+        }
+        for (int y = 0; y < mapHeight; ++y) {
+            auto& lastRow = (*lastMapState)[y];
+            auto& tileRow = tiles[y];
+            auto& mapRow = tileMap[y];
 
-                tiles[y][x] = std::move(tile);
-                tileMap[y][x] = code;
+            for (int x = 0; x < mapWidth; ++x) {
+                int code = lastRow[x];
+                auto tile = TileFactory::constructTile(code, x, y, tileSize);
+
+                if (code == 8) {
+                    auto it = std::find_if(waterTilesCoords.begin(), waterTilesCoords.end(),
+                        [&](const auto& c){ return c.first == y && c.second == x; });
+
+                    if (it == waterTilesCoords.end()) {
+                        waterTilesCoords.emplace_back(y, x);
+                    }
+
+                
+
+                
+                    tilesInWaterCoords.erase(
+                        std::remove_if(tilesInWaterCoords.begin(), tilesInWaterCoords.end(),
+                        [&](const auto& coord){ return coord.first == y && coord.second == x; }),
+                        tilesInWaterCoords.end()
+                    );
+                }
+                else if (code == 50) {
+                    tileInWater.emplace_back(y, x);
+                }
+
+                tileRow[x] = std::move(tile);
+                mapRow[x] = code;
+            }
+        }
+        std::cout << "\n\n" << std::endl;
+        std::cout << "Posle undo:" << std::endl;
+        for(int y = 0; y < mapHeight; ++y) {
+            for(int x = 0; x < mapWidth; ++x) {
+                if(tileMap[y][x] == 50) 
+                    std::cout << "Na poziciji " << y << ", " << x << " je most." << std::endl;
             }
         }
     }
